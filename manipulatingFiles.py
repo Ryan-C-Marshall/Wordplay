@@ -11,7 +11,7 @@ def analyzeLetterFrequencies():
     for i in range(97, 123):
         letterDict[chr(i)] = 0
 
-    with open("hopefulFile.txt", "r") as file:
+    with open("collinsScrabbleDictionary.txt", "r") as file:
         for word in file.readlines():
             letterDict[word[0]] += 1
 
@@ -64,7 +64,7 @@ def addWordsFromFiles():
     bigWordList: list = list(megaSet)
     bigWordList.sort()
 
-    with open("hopefulFile.txt", "w") as file:
+    with open("collinsScrabbleDictionary.txt", "w") as file:
         for word in bigWordList:
             file.write(word + "\n")
         file.close()

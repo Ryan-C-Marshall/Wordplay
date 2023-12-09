@@ -3,7 +3,7 @@ import json
 
 def get_word_list(n, minimum) -> list:
     wordList = []
-    with open("words_alpha.txt", "r") as file:
+    with open("otherWordList.txt", "r") as file:
         for line in file:
             line = line[:len(line) - 1].lower()
             if n >= len(line) >= minimum:
@@ -14,7 +14,7 @@ def get_word_list(n, minimum) -> list:
 
 def get_word_set(n, minimum) -> set:
     wordsSet = set()
-    with open("hopefulFile.txt", "r") as file:
+    with open("collinsScrabbleDictionary.txt", "r") as file:
         for line in file.readlines():
             line = line[:len(line) - 1]
             if n >= len(line) >= minimum:
